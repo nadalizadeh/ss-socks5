@@ -7,7 +7,7 @@ import (
 	"net"
 	"strings"
 
-	"github.com/tabjy/ss-socks5/3rd-party/go-shadowsocks2"
+	"../3rd-party/go-shadowsocks2"
 
 	"github.com/shadowsocks/go-shadowsocks2/core"
 	"github.com/tabjy/yagl"
@@ -37,7 +37,7 @@ func ServeAccount(ssAddr, s5Addr, cipher string, account *Account) {
 		log.Fatal(err)
 	}
 
-	go_shadowsocks2.TcpRemote(ssAddr, ciph.StreamConn, s5Addr, account)
+	go_shadowsocks2.TcpRemote(ssAddr, ciph.StreamConn, s5Addr) //, account)
 }
 
 func MgrServer(mgrAddr, s5Addr, serverHost, cipher string) {

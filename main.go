@@ -7,9 +7,9 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/tabjy/ss-socks5/3rd-party/go-shadowsocks2"
+	"./3rd-party/go-shadowsocks2"
 
-	"github.com/tabjy/ss-socks5/internal"
+	"./internal"
 	"github.com/tabjy/yagl"
 )
 
